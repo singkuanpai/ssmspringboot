@@ -15,4 +15,91 @@
         WHERE
         id = #{id, jdbcType=BIGINT}
     </select>
+
+    <select id="findByNameAndAge" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = #{name}
+        AND
+        age = #{age}
+    </select>
+
+    <select id="findByNameAndAge2" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = #{param1}
+        AND
+        age = #{param2}
+    </select>
+
+    <select id="findByPojo" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = #{name}
+        AND
+        age = #{age}
+    </select>
+
+    <select id="findByMap" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = #{name}
+        AND
+        age = #{age}
+    </select>
+
+    <select id="findByList" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = #{list[0]}
+        AND
+        age = #{list[1]}
+    </select>
+
+    <select id="findByArray" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = #{array[0]}
+        AND
+        age = #{array[1]}
+    </select>
+
+    <select id="testGetValue1" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = #{name}
+    </select>
+
+    <select id="testGetValue2" resultMap="BaseResultMap">
+        SELECT
+        id, name, age
+        FROM
+        user
+        WHERE
+        name = '${name}'
+    </select>
+
+
+
 </mapper>
