@@ -11,6 +11,8 @@ mybatis log plugin
 IntelliJ idea  -> new -> project -> spring assitant -> default
 
 ## 项目配置
+
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/mytest
 spring.datasource.username=mytest
 spring.datasource.password=mytest
@@ -23,7 +25,7 @@ mybatis.mapper-locations = classpath*:mapper/*.xml
 mybatis.type-aliases-package = com.grant.ssmdbdemo.entity
 
 mybatis.configuration.log-impl = org.apache.ibatis.logging.stdout.StdOutImpl
-
+```
 
 
 ## Email
